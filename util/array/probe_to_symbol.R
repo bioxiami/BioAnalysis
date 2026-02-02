@@ -47,8 +47,8 @@ gpl_table <- gpl_data %>%
     into = c("EnsemblId", "GeneSymbol"),
     sep = " // ", fill = "right", extra = "drop"
   ) %>%
-  rename(ProbesetId = probeset_id) %>%
-  select(ProbesetId, EnsemblId, GeneSymbol)
+  rename(ProbeKey = probeset_id) %>%
+  select(ProbeKey, EnsemblId, GeneSymbol)
 
 
 # 方法二：用 GEOquery 自动获取
